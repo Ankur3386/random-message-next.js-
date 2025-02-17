@@ -41,6 +41,7 @@ providers:[
 ),
 ],
 callbacks:{
+    //jwt sa user mila fir user ko token ma dala di than token  ma value nikal ka session ma dal di
     async jwt ({token,user}){
         if(user){
    token._id =user._id?.toString();
