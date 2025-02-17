@@ -8,6 +8,7 @@ export const config={
 export async function middleware(request:NextRequest){
     const token =await getToken({req:request})
     const url = request.nextUrl;
+    //In Next.js middleware, request.nextUrl is used instead of request.url because nextUrl provides a parsed URL object with additional Next.js-specific features, whereas request.url is just a raw string.
 
     if (
         token &&
